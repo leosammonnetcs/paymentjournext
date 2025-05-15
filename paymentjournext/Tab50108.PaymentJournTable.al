@@ -25,7 +25,7 @@ table 50108 NewPaymentJournTable
         {
             Caption = 'Sort Code';
         }
-        field(6; Reference; Code[50])
+        field(6; Reference; Text[30])
         {
             Caption = 'Reference';
         }
