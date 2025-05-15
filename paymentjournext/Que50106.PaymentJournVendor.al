@@ -24,7 +24,7 @@ query 50106 PaymentJournVendor
                     column(Bank_Account_No_; "Bank Account No.") { }
                     column(Bank_Branch_No_; "Bank Branch No.") { }
 
-                    column(Reference_No_; "Reference No.") { }
+                    // column(Reference_No_; "Reference No.") { }
                 }
 
             }
