@@ -16,7 +16,7 @@ report 50105 "PaymentJournalExportReport"
             column(Name; Name) { }
             column(Account_No_; "Account No.") { }
             column(Sort_Code; "Sort Code") { }
-            // column(Reference; Reference) { }
+            column(Reference; Reference) { }
         }
     }
 
@@ -61,7 +61,7 @@ report 50105 "PaymentJournalExportReport"
                         PaymentJournTable.Name := VendorBankAcc.Name;
                         PaymentJournTable."Account No." := VendorBankAcc."Bank Account No.";
                         PaymentJournTable."Sort Code" := VendorBankAcc."Bank Branch No.";
-                        // PaymentJournTable.Reference := VendorBankAcc."Reference No.";
+                        PaymentJournTable.Reference := VendorBankAcc."Reference No.";
                     end;
                 end;
 
@@ -87,7 +87,7 @@ report 50105 "PaymentJournalExportReport"
             PaymentJournTable.Name := PaymentJournVendor.Name;
             PaymentJournTable."Account No." := PaymentJournVendor.Bank_Account_No_;
             PaymentJournTable."Sort Code" := PaymentJournVendor.Bank_Branch_No_;
-            // PaymentJournTable.Reference := PaymentJournVendor.Reference_No_;
+            PaymentJournTable.Reference := PaymentJournVendor.Reference_No_;
             PaymentJournTable.Insert();
         end;
         PaymentJournVendor.Close();
